@@ -2,7 +2,7 @@
 
 **Developing a Lightweight Deepfake Detection Framework for Social Media in Eswatini**
 
-Final Year Project — BSc Information Technology, Department of Computer Science, University of Eswatini (Kwaluseni Campus)
+Final Year Project: BSc Information Technology, Department of Computer Science, University of Eswatini (Kwaluseni Campus)
 
 **Authors:** Precious T. Ndwandwe (202200294) & Munashe Matsanura (202203710)
 
