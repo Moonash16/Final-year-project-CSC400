@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.lisive.detector.ForensicScoringTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-04-15T09:59:28" hostname="SAKHIWO" time="2.915">
+  <properties/>
+  <testcase name="testClusteringPrevention" classname="com.lisive.detector.ForensicScoringTest" time="2.906"/>
+  <testcase name="testConfidenceCurve" classname="com.lisive.detector.ForensicScoringTest" time="0.005"/>
+  <testcase name="testScoringWeights" classname="com.lisive.detector.ForensicScoringTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

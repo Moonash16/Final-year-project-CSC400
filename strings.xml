@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PreMune Secure</string>
+    <string name="select_image">Select Image</string>
+    <string name="scan">Scan for Deepfake</string>
+    <string name="enable_overlay">Enable Floating Bubble</string>
+    <string name="result_fake">⚠️ DEEPFAKE DETECTED</string>
+    <string name="result_real">✓ LIKELY AUTHENTIC</string>
+    <string name="confidence">Confidence: %.1f%%</string>
+    <string name="offline_note">All detection happens on your device. No internet needed.</string>
+    <string name="scanning">Scanning image...</string>
+    <string name="ela_label">ELA Inconsistency</string>
+    <string name="noise_label">Noise Abnormality</string>
+    <string name="compression_label">Compression Artifacts</string>
+    <string name="edges_label">Edge Inconsistencies</string>
+</resources>
