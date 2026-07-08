@@ -20,11 +20,13 @@ INT8 post-training quantization reduced the model's size by 89.2%, shrinking it 
 
 This repository contains the full working project, including the Android app source, model training scripts, trained models, and the final APK build, organised as a flat working directory rather than a separated package structure:
 
-- **Android app source** — `mainactivity.java`, `overlayservice.java`, `deepfakedetector.java`, `forensicanalyzer.java`, `ForensicScoringTest.java`, and associated XML layouts (`activity_main.xml`, `AndroidManifest.xml`, `strings.xml`, `themes.xml`, etc.)
-- **Model training scripts (Python)** — `data_preprocessing.py`, `model_training.py`, `model_export.py`, `train.py`, `retrain_model.py`, `evaluate.py`, `convert_to_tflite.py`, `utils.py`
-- **Trained models** — `lisive_deepfake_model.h5` (Keras/HDF5), plus exported `.tflite` versions (float and INT8-quantized)
-- **Final build** preMune Secure.apk`
-- **requirements.txt** Python dependencies for the training pipeline
+The Android app source code includes files such as mainactivity.java, overlayservice.java, deepfakedetector.java, forensicanalyzer.java, and ForensicScoringTest.java, along with associated XML layouts including activity_main.xml, AndroidManifest.xml, strings.xml, and themes.xml.
+
+The model training scripts are written in Python and include data_preprocessing.py, model_training.py, model_export.py, train.py, retrain_model.py, evaluate.py, convert_to_tflite.py, and utils.py.
+
+The trained models are provided as lisive_deepfake_model.h5 in Keras/HDF5 format, along with exported .tflite versions in both float and INT8-quantized form.
+
+The final build is available as preMune Secure.apk, and Python dependencies for the training pipeline are listed in requirements.txt.
 
 ## Methodology Summary
 
