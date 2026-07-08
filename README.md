@@ -9,19 +9,16 @@ Final Year Project — BSc Information Technology, Department of Computer Scienc
 **Supervisor:** Mr. E. L. Dube
 
 ## Overview
-PreMune Secure is a lightweight, fully offline Android application designed to detect manipulated media (deepfakes) directly within the social media platforms where such content is most commonly encountered — Facebook, TikTok, and WhatsApp. It was built to address the lack of accessible, low-resource, on-device deepfake detection tools for regions like Eswatini, where computationally intensive detection solutions are impractical.
+PreMune Secure is a lightweight, fully offline Android application designed to detect manipulated media (deepfakes) directly within the social media platforms where such content is most commonly encountered in Facebook, TikTok, and WhatsApp. It was built to address the lack of accessible, low-resource, on-device deepfake detection tools for regions like Eswatini, where computationally intensive detection solutions are impractical.
 
 The system combines a custom-trained, quantized deepfake detection model with a multi-metric forensic analysis suite (Error Level Analysis, noise profiling, and structured pattern detection), fused through weighted averaging for stronger detection accuracy.
 
 ## Key Results
-- **74.3%** validation accuracy (custom fine-tuned MobileNetV2 classifier) vs. **46.0%** for a generic pre-trained MobileNetV2 baseline — a 28.3 percentage point improvement
-- **89.2%** model size reduction via INT8 post-training quantization — from 27.3 MB down to **2.96 MB**
-- Trained on a balanced dataset of **6,000** real and synthetic face images
-- Runs on **Android 5.0+**, via a persistent floating overlay service compatible with Facebook, TikTok, and WhatsApp
-
+- **74.3%** validation accuracy (custom fine-tuned MobileNetV2 classifier) vs. **46.0%** for a generic pre-trained MobileNetV2 baseline  representing a 28.3 percentage point improvement
+INT8 post-training quantization reduced the model's size by 89.2%, shrinking it from 27.3 MB down to 2.96 MB. The model was trained on a balanced dataset of 6,000 real and synthetic face images, and the final application runs on Android 5.0 and above through a persistent floating overlay service compatible with Facebook, TikTok, and WhatsApp.
 ## Repository Structure
 
-This repository contains the full working project — Android app source, model training scripts, trained models, and the final APK build — as a flat working directory rather than a separated package structure:
+This repository contains the full working project, including the Android app source, model training scripts, trained models, and the final APK build, organised as a flat working directory rather than a separated package structure:
 
 - **Android app source** — `mainactivity.java`, `overlayservice.java`, `deepfakedetector.java`, `forensicanalyzer.java`, `ForensicScoringTest.java`, and associated XML layouts (`activity_main.xml`, `AndroidManifest.xml`, `strings.xml`, `themes.xml`, etc.)
 - **Model training scripts (Python)** — `data_preprocessing.py`, `model_training.py`, `model_export.py`, `train.py`, `retrain_model.py`, `evaluate.py`, `convert_to_tflite.py`, `utils.py`
