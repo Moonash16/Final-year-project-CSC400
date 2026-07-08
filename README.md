@@ -9,7 +9,7 @@ Final Year Project: BSc Information Technology, Department of Computer Science, 
 **Supervisor:** Mr. E. L. Dube
 
 ## Overview
-PreMune Secure is a lightweight, fully offline Android application designed to detect manipulated media (deepfakes) directly within the social media platforms where such content is most commonly encountered in Facebook, TikTok, and WhatsApp. It was built to address the lack of accessible, low-resource, on-device deepfake detection tools for regions like Eswatini, where computationally intensive detection solutions are impractical.
+`PreMune Secure` is a lightweight, fully offline Android application designed to detect manipulated media (deepfakes) directly within the social media platforms where such content is most commonly encountered in Facebook, TikTok, and WhatsApp. It was built to address the lack of accessible, low-resource, on-device deepfake detection tools for regions like Eswatini, where computationally intensive detection solutions are impractical.
 
 The system combines a custom-trained, quantized deepfake detection model with a multi-metric forensic analysis suite (Error Level Analysis, noise profiling, and structured pattern detection), fused through weighted averaging for stronger detection accuracy.
 
@@ -39,7 +39,7 @@ The final build is available as `preMune Secure.apk`, and Python dependencies fo
 ## Running the Project
 
 **Train / retrain the model:**
-To train or retrain the model, first install the required dependencies using pip install `-r requirements.txt`, then run python `data_preprocessing.py`, followed by `python model_training.py`, and finally `python model_export.py`.
+To train or retrain the model, first install the required dependencies using `pip install -r requirements.txt`, then run python `data_preprocessing.py`, followed by `python model_training.py`, and finally `python model_export.py`.
 
 **Android app:**
 Open the project in Android Studio and build/run `mainactivity.java` as the entry point, or install the pre-built `preMune Secure.apk` directly on an Android 5.0+ device.
