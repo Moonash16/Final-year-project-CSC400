@@ -20,7 +20,7 @@ INT8 post-training quantization reduced the model's size by 89.2%, shrinking it 
 
 This repository contains the full working project, including the Android app source, model training scripts, trained models, and the final APK build, organised as a flat working directory rather than a separated package structure:
 
-The Android app source code includes files such as mainactivity.java, overlayservice.java, deepfakedetector.java, forensicanalyzer.java, and ForensicScoringTest.java, along with associated XML layouts including activity_main.xml, AndroidManifest.xml, strings.xml, and themes.xml.
+The Android app source code includes files such as `mainactivity.java, overlayservice.java, deepfakedetector.java, forensicanalyzer.java, and ForensicScoringTest.java, along with associated XML layouts including activity_main.xml, AndroidManifest.xml, strings.xml, and themes.xml`.
 
 The model training scripts are written in Python and include data_preprocessing.py, model_training.py, model_export.py, train.py, retrain_model.py, evaluate.py, convert_to_tflite.py, and utils.py.
 
