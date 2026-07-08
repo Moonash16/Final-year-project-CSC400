@@ -7,8 +7,7 @@ Final Year Project — BSc Information Technology, Department of Computer Scienc
 **Authors:** Precious T. Ndwandwe (202200294) & Munashe Matsanura (202203710)
 **Supervisor:** Mr. E. L. Dube
 
-## Overview
-PreMune Secure is a lightweight, fully offline Android application designed to detect manipulated media (deepfakes) directly within the social media platforms where such content is most commonly encountered — Facebook, TikTok, and WhatsApp. It was built to address the lack of accessible, low-resource, on-device deepfake detection tools for regions like Eswatini, where computationally intensive detection solutions are impractical.
+## OverviewPreMune Secure is a lightweight, fully offline Android application designed to detect manipulated media (deepfakes) directly within the social media platforms where such content is most commonly encountered — Facebook, TikTok, and WhatsApp. It was built to address the lack of accessible, low-resource, on-device deepfake detection tools for regions like Eswatini, where computationally intensive detection solutions are impractical.
 
 The system combines a custom-trained, quantized deepfake detection model with a multi-metric forensic analysis suite (Error Level Analysis, noise profiling, and structured pattern detection), fused through weighted averaging for stronger detection accuracy.
 
