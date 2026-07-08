@@ -1,65 +1,59 @@
-# deepfake-detection/deepfake-detection/README.md
+# PreMune Secure
 
-# Deepfake Detection Project
+**Developing a Lightweight Deepfake Detection Framework for Social Media in Eswatini**
 
-This project aims to develop a deepfake detection model using TensorFlow/Keras, optimized for mobile deployment. The model is trained on a dataset of real and fake images, and it is exported as a TensorFlow Lite model for use in mobile applications.
+Final Year Project — BSc Information Technology, Department of Computer Science, University of Eswatini (Kwaluseni Campus)
 
-## Project Structure
+**Authors:** Precious T. Ndwandwe (202200294) & Munashe Matsanura (202203710)
+**Supervisor:** Mr. E. L. Dube
 
-- **data/**: Contains raw and processed images for training.
-  - **raw/**: Directory for raw images.
-  - **processed/**: Directory for processed images ready for training.
-  - **README.md**: Documentation about the data structure and usage.
+---
 
-- **models/**: Stores the trained models.
-  - **model.h5**: The trained Keras model in HDF5 format.
-  - **model.tflite**: The exported TensorFlow Lite model for mobile deployment.
+## Overview
 
-- **notebooks/**: Contains Jupyter notebooks for data exploration.
-  - **exploration.ipynb**: Notebook for exploratory data analysis and visualization.
+PreMune Secure is a lightweight, fully offline Android application designed to detect manipulated media (deepfakes) directly within the social media platforms where such content is most commonly encountered — Facebook, TikTok, and WhatsApp. It was built to address the lack of accessible, low-resource, on-device deepfake detection tools for regions like Eswatini, where computationally intensive detection solutions are impractical.
 
-- **src/**: Source code for data processing, model training, and exporting.
-  - **data_preprocessing.py**: Functions for loading and preprocessing the dataset.
-  - **model_training.py**: Defines the model architecture and training loop.
-  - **model_export.py**: Handles conversion of the Keras model to TensorFlow Lite format.
-  - **utils.py**: Utility functions for logging and evaluation metrics.
+The system combines a custom-trained, quantized deepfake detection model with a multi-metric forensic analysis suite (Error Level Analysis, noise profiling, and structured pattern detection), fused through weighted averaging for stronger detection accuracy.
 
-- **requirements.txt**: Lists dependencies required for the project, including TensorFlow and Keras.
+## Key Results
 
-## Setup Instructions
+- **74.3%** validation accuracy (custom fine-tuned MobileNetV2 classifier) vs. **46.0%** for a generic pre-trained MobileNetV2 baseline — a 28.3 percentage point improvement
+- **89.2%** model size reduction via INT8 post-training quantization — from 27.3 MB down to **2.96 MB**
+- Trained on a balanced dataset of **6,000** real and synthetic face images
+- Runs on **Android 5.0+**, via a persistent floating overlay service compatible with Facebook, TikTok, and WhatsApp
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd deepfake-detection
-   ```
+## Repository Structure
 
-2. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+This repository contains the full working project — Android app source, model training scripts, trained models, and the final APK build — as a flat working directory rather than a separated package structure:
 
-3. Prepare the dataset by placing raw images in the `data/raw` directory.
+- **Android app source** — `mainactivity.java`, `overlayservice.java`, `deepfakedetector.java`, `forensicanalyzer.java`, `ForensicScoringTest.java`, and associated XML layouts (`activity_main.xml`, `AndroidManifest.xml`, `strings.xml`, `themes.xml`, etc.)
+- **Model training scripts (Python)** — `data_preprocessing.py`, `model_training.py`, `model_export.py`, `train.py`, `retrain_model.py`, `evaluate.py`, `convert_to_tflite.py`, `utils.py`
+- **Trained models** — `lisive_deepfake_model.h5` (Keras/HDF5), plus exported `.tflite` versions (float and INT8-quantized)
+- **Final build** — `preMune Secure.apk`
+- **requirements.txt** — Python dependencies for the training pipeline
 
-4. Run the data preprocessing script to process the images:
-   ```
-   python src/data_preprocessing.py
-   ```
+## Methodology Summary
 
-5. Train the model using:
-   ```
-   python src/model_training.py
-   ```
+1. Reviewed existing deepfake detection techniques and their limitations for low-resource deployment
+2. Designed a lightweight detection framework architecture based on MobileNetV2
+3. Constructed a balanced deepfake dataset and trained a custom binary classifier
+4. Benchmarked the custom model against a generic MobileNet baseline on identical data
+5. Applied INT8 post-training quantization to minimize computational footprint
+6. Integrated the model with a forensic-neural fusion engine and an in-app floating overlay for real-time, in-context scanning
 
-6. Export the trained model to TensorFlow Lite format:
-   ```
-   python src/model_export.py
-   ```
+## Running the Project
 
-## Usage
+**Train / retrain the model:**
+```bash
+pip install -r requirements.txt
+python data_preprocessing.py
+python model_training.py
+python model_export.py
+```
 
-The trained model can be used for detecting deepfakes in images. Load the TensorFlow Lite model in your mobile application and use it to classify images as real or fake.
+**Android app:**
+Open the project in Android Studio and build/run `mainactivity.java` as the entry point, or install the pre-built `preMune Secure.apk` directly on an Android 5.0+ device.
 
-## Acknowledgments
+## Acknowledgements
 
-This project is inspired by the growing need for reliable deepfake detection methods in the digital age.
+We thank our supervisor, Mr. E. L. Dube, for his guidance throughout this project, the Department of Computer Science at the University of Eswatini, and the open-source communities behind TensorFlow, Android, FaceForensics++, and CelebA, whose publicly available resources supported this work.
