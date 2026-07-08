@@ -40,12 +40,7 @@ The final build is available as preMune Secure.apk, and Python dependencies for 
 ## Running the Project
 
 **Train / retrain the model:**
-```bash
-pip install -r requirements.txt
-python data_preprocessing.py
-python model_training.py
-python model_export.py
-```
+To train or retrain the model, first install the required dependencies using pip install -r requirements.txt, then run python data_preprocessing.py, followed by python model_training.py, and finally python model_export.py.
 
 **Android app:**
 Open the project in Android Studio and build/run `mainactivity.java` as the entry point, or install the pre-built `preMune Secure.apk` directly on an Android 5.0+ device.
