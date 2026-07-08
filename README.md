@@ -27,7 +27,6 @@ The model training scripts are written in Python and include data_preprocessing.
 The trained models are provided as lisive_deepfake_model.h5 in Keras/HDF5 format, along with exported .tflite versions in both float and INT8-quantized form.
 
 The final build is available as preMune Secure.apk, and Python dependencies for the training pipeline are listed in requirements.txt.
-
 ## Methodology Summary
 
 1. Reviewed existing deepfake detection techniques and their limitations for low-resource deployment
