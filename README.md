@@ -23,8 +23,8 @@ This repository contains the full working project, including the Android app sou
 - **Android app source** — `mainactivity.java`, `overlayservice.java`, `deepfakedetector.java`, `forensicanalyzer.java`, `ForensicScoringTest.java`, and associated XML layouts (`activity_main.xml`, `AndroidManifest.xml`, `strings.xml`, `themes.xml`, etc.)
 - **Model training scripts (Python)** — `data_preprocessing.py`, `model_training.py`, `model_export.py`, `train.py`, `retrain_model.py`, `evaluate.py`, `convert_to_tflite.py`, `utils.py`
 - **Trained models** — `lisive_deepfake_model.h5` (Keras/HDF5), plus exported `.tflite` versions (float and INT8-quantized)
-- **Final build** — `preMune Secure.apk`
-- **requirements.txt** — Python dependencies for the training pipeline
+- **Final build** preMune Secure.apk`
+- **requirements.txt** Python dependencies for the training pipeline
 
 ## Methodology Summary
 
