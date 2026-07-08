@@ -5,6 +5,7 @@
 Final Year Project — BSc Information Technology, Department of Computer Science, University of Eswatini (Kwaluseni Campus)
 
 **Authors:** Precious T. Ndwandwe (202200294) & Munashe Matsanura (202203710)
+
 **Supervisor:** Mr. E. L. Dube
 
 ## Overview
